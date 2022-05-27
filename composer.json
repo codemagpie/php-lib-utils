@@ -2,7 +2,10 @@
     "name": "codemagpie/utils",
     "type": "library",
     "description": "A utils",
-    "keywords": ["codemagpie", "utils"],
+    "keywords": [
+        "codemagpie",
+        "utils"
+    ],
     "authors": [
         {
             "name": "lyf",
@@ -19,6 +22,9 @@
     "license": "MIT",
     "scripts": {
         "cs-fix": "php-cs-fixer fix $1"
+    },
+    "archive": {
+        "exclude": ["/tests", ".gitattributes", ".gitignore", ".php-cs-fixer.php"]
     },
     "prefer-stable": true,
     "config": {
