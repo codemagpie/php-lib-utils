@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * This file is part of the codemagpie/array2object package.
+ * This file is part of the codemagpie/utils package.
  *
  * (c) CodeMagpie Lyf <https://github.com/codemagpie>
  *
@@ -10,6 +10,8 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 namespace CodeMagpie\Utils;
+
+use ReflectionClass;
 
 class Utils
 {
@@ -51,5 +53,11 @@ class Utils
             }
         }
         return $convert;
+    }
+
+    public static function getEnumValues(string $enumClass): array
+    {
+        $ref = new ReflectionClass($enumClass);
+        return array_values($ref->getConstants());
     }
 }

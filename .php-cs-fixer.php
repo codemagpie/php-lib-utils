@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * This file is part of the codemagpie/array2object package.
+ * This file is part of the codemagpie/utils package.
  *
  * (c) CodeMagpie Lyf <https://github.com/codemagpie>
  *
@@ -12,7 +12,7 @@ declare(strict_types=1);
 use PhpCsFixer\Config;
 
 $header = <<<'EOF'
-This file is part of the codemagpie/array2object package.
+This file is part of the codemagpie/utils package.
  
 (c) CodeMagpie Lyf <https://github.com/codemagpie>
 

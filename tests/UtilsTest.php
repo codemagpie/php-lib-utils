@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * This file is part of the codemagpie/array2object package.
+ * This file is part of the codemagpie/utils package.
  *
  * (c) CodeMagpie Lyf <https://github.com/codemagpie>
  *
@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace CodeMagpie\UtilsTests;
 
 use CodeMagpie\Utils\Utils;
+use CodeMagpie\UtilsTests\Stubs\EnumDemo;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -46,5 +47,11 @@ class UtilsTest extends TestCase
     {
         $user = ['userInfo' => ['addressInfo' => 'test']];
         self::assertEquals(['user_info' => ['address_info' => 'test']], Utils::arrayKeyToLine($user));
+    }
+
+    public function testGetEnumValues(): void
+    {
+        $values = Utils::getEnumValues(EnumDemo::class);
+        self::assertEquals([1, 0], $values);
     }
 }
